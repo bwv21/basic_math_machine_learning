@@ -1,4 +1,4 @@
-basic_math_machine_learning
+머신러닝 기초 수학
 -----------------------------
 
-# [Regression](./regression/README.md)
+# [회귀 Regression](./regression/README.md)

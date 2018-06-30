@@ -145,7 +145,7 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 >![img](./img/sigmoid_function_00.jpg)
 
 ```
-시그모이드 함수는 0 < f(x) < 1 이니까 확률처럼 다룰 수 있다
+시그모이드 함수는 0 < f(x) < 1 이므로 확률처럼 다룰 수 있다
 ```
 ##### 최급하강법
 ```
@@ -213,10 +213,10 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 >![equation](http://latex.codecogs.com/gif.latex?logL%28%5Ctheta%29%3Dlog%5Cprod_%7Bi%3D1%7D%5E%7Bn%7DP%28y_i%3D1%7Cx_i%29%5E%7By_i%7DP%28y_i%3D0%7Cx_i%29%5E%7B1-y_i%7D)
 
 ```
-로그는 단순 증가 함수이므로 우도함수를 최대화 하는 것과 로그를 취한 우도함수를 최대화 하는 것은 의미가 같다
+로그 함수는 단순 증가 함수이므로 우도함수를 최대화 하는 것과 로그를 취한 우도함수를 최대화 하는 것은 의미가 같다
 ```
 ```
-대수우도함수는 다음과 같이 변형할 수 있다
+로그를 취한 대수우도함수는 다음과 같이 변형할 수 있다
 ```
 >![equation](http://latex.codecogs.com/gif.latex?logL%28%5Ctheta%29%3Dlog%5Cprod_%7Bi%3D1%7D%5E%7Bn%7DP%28y_i%3D1%7Cx_i%29%5E%7By_i%7DP%28y_i%3D0%7Cx_i%29%5E%7B1-y_i%7D)
 
@@ -233,13 +233,15 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 ```
 >![equation](http://latex.codecogs.com/gif.latex?logL%28%5Ctheta%29%3D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28%7By_i%7Dlogf_%5Ctheta%28x_i%29&plus;%28%7B1-y_i%7D%29log%281-f_%5Ctheta%28x_i%29%29%29)
 ```
-각각의 매개변수들로 미분한다
+각각의 매개변수들로 미분해야 한다
 ```
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20logL%28%5Ctheta%29%7D%7B%5Cpartial%20%5Ctheta_j%7D%3D%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta_j%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28%7By_i%7Dlogf_%5Ctheta%28x_i%29&plus;%28%7B1-y_i%7D%29log%281-f_%5Ctheta%28x_i%29%29%29)
+
 ```
 합성함수의 미분을 사용한다
 ```
 >![equation](http://latex.codecogs.com/gif.latex?u%3DlogL%28%5Ctheta%29)
+
 >![equation](http://latex.codecogs.com/gif.latex?v%3Df_%5Ctheta%28x%29)
 
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20%5Ctheta_j%7D%3D%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20v%7D%5Ccdot%5Cfrac%7B%5Cpartial%20v%7D%7B%5Cpartial%20%5Ctheta_j%7D)
@@ -249,8 +251,8 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20v%7D%3D%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20v%7D%28%7By_i%7Dlog%28v%29&plus;%28%7B1-y_i%7D%29log%281-v%29%29)
 
 ```
-log(v) 의 미분은 1/v 라는 것을 이용한다
-log(1-v) 의 경우는 아래와 같이 합성함수 미분을 사용해야 한다
+log(v)의 미분은 1/v 라는 것을 이용한다
+log(1-v)의 경우는 아래와 같이 합성함수 미분을 사용한다
 ```
 >![equation](http://latex.codecogs.com/gif.latex?s%3D1-v)
 
@@ -276,7 +278,7 @@ log(1-v) 의 경우는 아래와 같이 합성함수 미분을 사용해야 한�
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7D%20x%7Ds%28x%29%3Ds%28x%29%281-s%28x%29%29)
 
 ```
-합성함수의 미분을 사용해서 미분해야 한다
+합성함수의 미분을 사용하면
 ```
 >![equation](http://latex.codecogs.com/gif.latex?z%3D%5Ctheta%5ETx)
 
@@ -286,7 +288,7 @@ log(1-v) 의 경우는 아래와 같이 합성함수 미분을 사용해야 한�
 
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20v%7D%7B%5Cpartial%20z%7D%3Dv%281-v%29)
 ```
-다음으로 z를 미분하면
+다음으로 z를 미분한다
 ```
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20%5Ctheta_j%7D%3D%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta_j%7D%5Ctheta%5ETx)
 

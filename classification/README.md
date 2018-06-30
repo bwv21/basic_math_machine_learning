@@ -17,7 +17,7 @@ a = (a1, a2)인 벡터의 길이
 >![equation](http://latex.codecogs.com/gif.latex?ax&plus;by&plus;c%3D0)
 
 ### 이진 분류
->![img](/img/bin_data.jpg)
+>![img](./img/bin_data.jpg)
 ```
 두 개의 요소(feature)를 가진 데이터를 두 그룹으로 분류한다고 하자
 평면 위의 점을 직선으로 두 개의 그룹으로 나눌 수 있다
@@ -44,19 +44,19 @@ a = (a1, a2)인 벡터의 길이
 
 >![equation](http://latex.codecogs.com/gif.latex?x_2%3D-x_1)
 
->![img](/img/x_-x.jpg)
+>![img](./img/x_-x.jpg)
 ```
 이것은 기울기가 -1인 직선이라 말할 수 있고, w=(1,1)과는 수직임을 알 수 있다
 다시 말해 '웨이트 벡터를 법선 벡터로하는 직선'을 해석한 모습이다
 ```
->![img](/img/bin_data_w.jpg)
+>![img](./img/bin_data_w.jpg)
 
 > #### *웨이트 벡터를 찾아내면 수직인 직선을 알게되고 그 직선으로 데이터를 구분할 수 있다*
 ### 퍼셉트론
 ```
 여러 개의 입력을 입력 받아 각각의 값에 웨이트를 곱해서 더한 것이 출력되는 형태
 ```
->![img](/img/perceptron.jpg)
+>![img](./img/perceptron.jpg)
 
 ### 식별함수
 ##### *x1이 더 크거나 같은 그룹을 1로 하고, x2가 더 큰 그룹을 -1로 표시한다고 하자*
@@ -74,12 +74,12 @@ a = (a1, a2)인 벡터의 길이
 ```
 벡터의 크기는 항상 양수이므로 내적의 부호는 cosine이 결정한다
 ```
->![img](/img/cos.jpg)
+>![img](./img/cos.jpg)
 
 ```
 직선을 사이에 두고 웨이트 벡터와 반대가 되는 영역에 있는 벡터와는 내적이 음수가 된다
 ```
->![img](/img/x_-x_dot.jpg)
+>![img](./img/x_-x_dot.jpg)
 
 > #### *내적은 벡터끼리 얼마나 닮았는지 알 수 있는 지표가 된다. 부호가 양이면 닮은 것이고 0이면 직각, 음이면 닮지 않은 것을 의미한다.*
 ### 웨이트 벡터 갱신식
@@ -92,7 +92,7 @@ a = (a1, a2)인 벡터의 길이
 무작위로 정한 벡터가 3사분면에 있다고 가정한다
 그리고 첫 학습 데이터로 x=(125, 30)의 데이터가 있다고 하자
 ```
->![img](/img/w_update_01.jpg)
+>![img](./img/w_update_01.jpg)
 
 ```
 해당 데이터는 x1(가로)이 더 크므로 1로 분류되어 있다
@@ -101,13 +101,13 @@ a = (a1, a2)인 벡터의 길이
 ```
 >![equation](http://latex.codecogs.com/gif.latex?%5Cboldsymbol%7Bw%7D&plus;y_1%20x_1%3D%5Cboldsymbol%7Bw%7D&plus;x_1)
 
->![img](/img/w_update_02.jpg)
+>![img](./img/w_update_02.jpg)
 
 ```
 w + x(빨간색)이 새로운 w가 된다
 새로운 w에 수직인 직선(파란색)을 그어보면 선이 회전되었음을 알 수 있다
 ```
->![img](/img/w_update_03.jpg)
+>![img](./img/w_update_03.jpg)
 
 ```
 갱신하기 전에는 웨이트 벡터와 반대편에 있었는데, 갱신 후에는 같은 방향에 있다
@@ -122,7 +122,7 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 단층 퍼셉트론으로는 선형분리가능인 문제밖에 해결할 수 없다
 직선을 한 개만 그어서 다음 데이터를 분류할 수 없는 것처럼, 직선으로 분류할 수 없는 경우는 선형분리가능이 아니다
 ```
->![img](/img/linear_0.jpg)
+>![img](./img/linear_0.jpg)
 
 ```
 다층 퍼셉트론(신경망)이나 선형분리불가능인 문제에도 적용할 수 있는 알고리즘이 필요하다
@@ -142,7 +142,7 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 ```
 >![equation](http://latex.codecogs.com/gif.latex?f_%5Ctheta%28x%29%20%3D%5Cfrac%7B1%7D%7B1&plus;%5Cmathrm%7Bexp%7D%28-%5Ctheta%5ETx%29%7D%3D%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-%5Ctheta%5ETx%7D%7D)
 
->![img](/img/sigmoid_function_00.jpg)
+>![img](./img/sigmoid_function_00.jpg)
 
 ```
 시그모이드 함수는 0 < f(x) < 1 이니까 확률처럼 다룰 수 있다
@@ -162,7 +162,7 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 ```
 >![equation](http://latex.codecogs.com/gif.latex?y%3D%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%201%5C%20%5C%20%28%5Ctheta%5ETx%5Cgeq%200%29%5C%5C%200%5C%20%5C%20%28%5Ctheta%5ETx%3C%200%29%20%5Cend%7Bmatrix%7D%5Cright.)
 
->![img](/img/sigmoid_function_01.jpg)
+>![img](./img/sigmoid_function_01.jpg)
 ```
 가로축이 x1이고, 세로축이 x2인 그래프를 생각하고, 임의의 매개변수를 이용하여 계산해 보면
 ```
@@ -174,7 +174,7 @@ y가 -1인 경우에도 갱신식의 벡터의 덧셈이 뺄셈이 될 뿐 과�
 ```
 그래프를 그려서 보면 다음과 같다
 ```
->![img](/img/logreg_00.png)
+>![img](./img/logreg_00.png)
 
 ```
 직선을 경계선으로 해서 한쪽이 가로로 긴 것, 다른 한쪽이 세로로 긴 것으로 분류된다

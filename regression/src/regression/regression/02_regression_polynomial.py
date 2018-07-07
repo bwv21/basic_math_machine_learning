@@ -47,12 +47,17 @@ def to_matrix(x):
     return np.vstack(stacks).T
 
 
-X = to_matrix(train_x_z)    # (20, 3)
+'''
+    n_train = train_x.shape[0]  # 데이터 개수.
+'''
+
+
+X = to_matrix(train_x_z)        # (n_train, n_theta)
 
 
 # 예측함수.
 def f(x):
-    return np.dot(x, theta)     # (20, 3) * (3,) = (20,)
+    return np.dot(x, theta)     # (n_train, n_theta) * (n_theta,) = (n_train,)
 
 
 # 오차함수(목적함수).

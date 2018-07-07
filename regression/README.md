@@ -87,11 +87,11 @@ E안에 f가 있기 때문에 합성함수의 미분을 사용한다
 
 >![equation](http://latex.codecogs.com/gif.latex?v%3Df_%7B%5Ctheta%7D%28x%29)
 
->![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20%5Ctheta_%7B0%7D%7D%3D%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20v%7D%5Ccdot%5Cfrac%7B%5Cpartial%20v%7D%7B%5Cpartial%20%5Ctheta_%7B0%7D%7D)
-
 ```
 첫번째 매개변수(theta0) 미분
 ```
+
+>![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20%5Ctheta_%7B0%7D%7D%3D%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20v%7D%5Ccdot%5Cfrac%7B%5Cpartial%20v%7D%7B%5Cpartial%20%5Ctheta_%7B0%7D%7D)
 
 >![equation](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20v%7D%3D%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%20v%7D%28%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28y_%7Bi%7D-v%29%5E2%29)
 

@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fba6e37b-d996-415c-8937-f5c304a13264</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>01_regression_two_params.py</StartupFile>
+    <StartupFile>02_regression_polynomial.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="00_show_train_data.py" />
+    <Compile Include="02_regression_polynomial.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

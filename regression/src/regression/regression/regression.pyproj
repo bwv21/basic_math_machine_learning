@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fba6e37b-d996-415c-8937-f5c304a13264</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>regression_00.py</StartupFile>
+    <StartupFile>01_regression_two_params.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="regression_00.py">
+    <Compile Include="01_regression_two_params.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="show_train_data.py" />
+    <Compile Include="00_show_train_data.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

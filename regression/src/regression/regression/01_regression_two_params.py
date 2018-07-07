@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 
 # 학습 데이터.
-train = np.loadtxt('click.csv', delimiter=',', dtype='int', skiprows=1)
+train = np.loadtxt('./data/click.csv', delimiter=',', dtype='int', skiprows=1)
 train_x = train[:,0]
 train_y = train[:,1]
 
@@ -59,13 +59,13 @@ count = 0
 error = E(train_x_z, train_y)
 
 while diff_error > 1e-2:
-    # theta0 := theta0 - eta * sigma(f(x) - y)
-    tmp_theta_0 = theta_0 - eta * np.sum(f(train_x_z) - train_y)
+    # theta0 := theta0 - eta * sigma((f(x) - y))
+    tmp_theta_0 = theta_0 - eta * np.sum((f(train_x_z) - train_y))
     
     # theta1 := theta1 - eta * sigma((f(x) - y) * x)
     tmp_theta_1 = theta_1 - eta * np.sum((f(train_x_z) - train_y) * train_x_z)
 
-    # 매개변수의 갱신은 동시에 일어나야 함에 유의한다(tmp_ 사용하고 한 번에 업데이트).
+    # 매개변수의 갱신은 동시에 일어나야 함에 유의한다(tmp_ 사용하고 한번에 업데이트).
     theta_0 = tmp_theta_0
     theta_1 = tmp_theta_1
 

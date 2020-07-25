@@ -44,7 +44,7 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cvec%7Bb%7D%3D-k%5Cvec%7Ba%7D) (k는 양의 정수)
 ```
-정리하면, 이변수 함수의 변화는 두 벡터의 내적으로 나타낼 수 있고, 이 내적의 최솟값은 두 벡가 반대방향 일 때이다
+정리하면, 이변수 함수의 변화는 두 벡터의 내적으로 나타낼 수 있고 이 내적의 최솟값은 두 벡터가 반대방향 일 때이다
 따라서 다음식의 관계가 성립해야 한다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29%3D-%5Ceta%20%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D)

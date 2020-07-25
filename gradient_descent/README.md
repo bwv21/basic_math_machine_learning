@@ -19,10 +19,6 @@
 >![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%3Df%28x&plus;%5CDelta%7Bx%7D%2Cy&plus;%5CDelta%7By%7D%29-f%28x%2Cy%29)
 
 >![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%5Capprox%20%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)
-```
-이렇게 표현했을 때, z가 세 변수 w, x, y의 함수일 때의 근사식은 다음과 같다
-```
->![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%5Capprox%20%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20w%7D%5CDelta%7Bw%7D&plus;%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)
 
 ### 경사하강법의 원리
 >![equation](https://latex.codecogs.com/gif.latex?z%3Df%28x%2Cy%29)

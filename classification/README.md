@@ -1,5 +1,5 @@
 # 분류 Classification
----------------------
+
 ### 로지스틱 회귀 logistic regression
 ```
 가로가 긴 것을 1, 세로가 긴 것을 0이라 가정한다

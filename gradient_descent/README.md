@@ -1,5 +1,5 @@
 # 경사하강법 Gradient Descent
------------------
+
 ### 다변수 함수의 근사식
 ```
 일변수 함수 y = f(x) 에서 x 값을 변경할 때 함숫값 y는 얼마나 변할까에 대한 질문은 도함수의 정의에서 출발할 수 있다
@@ -10,11 +10,11 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?f%28x&plus;%5CDelta%7Bx%7D%29%5Capprox%20f%28x%29&plus;%7Bf%7D%27%28x%29%5CDelta%7Bx%7D)
 ```
-이를 이변수 함수로 확장하면 다음과 같다
+이변수 함수 z = f(x, y)로 확장하면 다음과 같다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?f%28x&plus;%5CDelta%7Bx%7D%2C%20y&plus;%5CDelta%7By%7D%29%5Capprox%20f%28x%2Cy%29&plus;%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)
 ```
-위 식은 정리하여 다음과 같이 나타낼 수 있다
+z를 사용하여 정리하면 다음과 같이 나타낼 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%3Df%28x&plus;%5CDelta%7Bx%7D%2Cy&plus;%5CDelta%7By%7D%29-f%28x%2Cy%29)
 
@@ -27,16 +27,19 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%3D0%2C%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%3D0)
 ```
-이는 함수의 최솟값인 점에서 접하는 평면이 수평이 될 것으로 기대하기 때문이다(필요조건)
-하지만 위의 식은 쉽게 풀리지 않기 때문에 방정식을 푸는 대신 그래프 상의 점을 조금씩 움직여 함수의 최솟값을 찾아야 한다
+이는 함수의 최솟값인 점에서 접하는 평면이 수평이 될 것으로 기대(필요조건)하기 때문이다
+하지만 위의 식은 쉽게 풀리지 않기 때문에 방정식을 푸는 대신 점을 조금씩 움직여 함수의 최솟값을 찾아야 하는데 이것이 경사하강법이다
 ```
->![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%5Capprox%20%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)
 ```
-위 관계식은 다음과 같이 벡터의 내적 형태로 나타낼 수 있다
+함수 z = f(x, y)에서 x와 y를 각각 조금(델타) 변화시켰을 때의 함수는 다음과 같다
+```
+>![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%5Capprox%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)
+```
+위 관계식은 다음 두 벡터의 내적 형태로 나타낼 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D%20%2C%20%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29)
 ```
-0이 아닌 두 벡터의 크기를 고정했다고 할 때, 내적이 최솟값이 되려면 두 벡터의 방향이 반대여야 한다
+두 벡터의 내적은 다음과 같이 정의할 수 있고 크기를 고정했다고 할 때, 내적이 최솟값이 되려면 두 벡터의 방향이 반대여야 한다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cvec%7Ba%7D%5Ccdot%5Cvec%7Bb%7D%3D%7C%5Cvec%7Ba%7D%7C%7C%5Cvec%7Bb%7D%7Ccos%5Ctheta)
 ```
@@ -44,9 +47,13 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cvec%7Bb%7D%3D-k%5Cvec%7Ba%7D) (k는 양의 정수)
 ```
-정리하면, 이변수 함수의 변화는 두 벡터의 내적으로 나타낼 수 있고 이 내적의 최솟값은 두 벡터가 반대방향 일 때이다
+정리하면, 이변수 함수의 변화는 두 벡터의 내적으로 나타낼 수 있고 이 내적의 최솟값은 두 벡터가 반대 방향일 때다
 따라서 다음식의 관계가 성립해야 한다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29%3D-%5Ceta%20%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D)
 
 >![equation](https://latex.codecogs.com/gif.latex?%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29%3D-%5Ceta%20%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20z%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D)
+```
+같은 방법으로 삼변수 이상인 함수에도 경사하강법을 다음과 같이 일반화할 수 있다
+```
+>![equation](https://latex.codecogs.com/gif.latex?%28%5CDelta%7Bx%7D_%7B1%7D%2C%5CDelta%7Bx%7D_%7B2%7D%2C...%2C%5CDelta%7Bx%7D_%7Bn%7D%29%3D-%5Ceta%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%7D%7B%5Cpartial%20x_%7B1%7D%7D%2C%26%20%5Cfrac%7B%5Cpartial%20f%7D%7B%5Cpartial%20x_%7B2%7D%7D%2C%20%26%20...%2C%20%26%20%5Cfrac%7B%5Cpartial%20f%7D%7B%5Cpartial%20x_%7Bn%7D%7D%20%5Cend%7Bpmatrix%7D)

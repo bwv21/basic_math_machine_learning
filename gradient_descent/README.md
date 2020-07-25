@@ -6,7 +6,7 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%7Bf%7D%27%28x%29%5Capprox%20%5Cfrac%7Bf%28x&plus;%5CDelta%7Bx%7D%29-f%28x%29%7D%7B%5CDelta%7Bx%7D%7D)
 ```
-이를 변형하면 일변수 함수의 근사식(선형근사)을 얻을 수 있으며
+이를 변형하면 다음과 같이 일변수 함수의 근사식(선형근사)을 얻을 수 있으며
 ```
 >![equation](https://latex.codecogs.com/gif.latex?f%28x&plus;%5CDelta%7Bx%7D%29%5Capprox%20f%28x%29&plus;%7Bf%7D%27%28x%29%5CDelta%7Bx%7D)
 ```

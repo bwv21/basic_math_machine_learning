@@ -6,7 +6,7 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%7Bf%7D%27%28x%29%5Capprox%20%5Cfrac%7Bf%28x&plus;%5CDelta%7Bx%7D%29-f%28x%29%7D%7B%5CDelta%7Bx%7D%7D)
 ```
-이를 변형하면 일변수 함수의 근사식(선형근사)을 얻을 수 있다
+이를 변형하면 일변수 함수의 근사식(선형근사)을 얻을 수 있으며
 ```
 >![equation](https://latex.codecogs.com/gif.latex?f%28x&plus;%5CDelta%7Bx%7D%29%5Capprox%20f%28x%29&plus;%7Bf%7D%27%28x%29%5CDelta%7Bx%7D)
 ```
@@ -14,7 +14,7 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?f%28x&plus;%5CDelta%7Bx%7D%2C%20y&plus;%5CDelta%7By%7D%29%5Capprox%20f%28x%2Cy%29&plus;%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)
 ```
-z를 사용하여 정리하면 다음과 같이 나타낼 수 있다
+위 식을 z를 사용하여 정리하면 다음과 같이 나타낼 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%3Df%28x&plus;%5CDelta%7Bx%7D%2Cy&plus;%5CDelta%7By%7D%29-f%28x%2Cy%29)
 
@@ -27,7 +27,7 @@ z를 사용하여 정리하면 다음과 같이 나타낼 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%3D0%2C%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%3D0)
 ```
-이는 함수의 최솟값인 점에서 접하는 평면이 수평이 될 것으로 기대(필요조건)하기 때문이다
+이는 함수의 최솟값인 점에서 접하는 평면이 수평이 될 것으로 기대하기 때문이다(필요조건)
 하지만 위의 식은 쉽게 풀리지 않기 때문에 방정식을 푸는 대신 점을 조금씩 움직여 함수의 최솟값을 찾아야 하는데 이것이 경사하강법이다
 ```
 ```
@@ -39,7 +39,7 @@ z를 사용하여 정리하면 다음과 같이 나타낼 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D%20%2C%20%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29)
 ```
-두 벡터의 내적은 다음과 같이 정의할 수 있고 크기를 고정했다고 할 때, 내적이 최솟값이 되려면 두 벡터의 방향이 반대여야 한다
+두 벡터의 내적은 다음과 같이 정의하고 크기를 고정했다고 할 때 내적이 최솟값이 되려면 두 벡터의 방향이 반대여야 한다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cvec%7Ba%7D%5Ccdot%5Cvec%7Bb%7D%3D%7C%5Cvec%7Ba%7D%7C%7C%5Cvec%7Bb%7D%7Ccos%5Ctheta)
 ```
@@ -47,8 +47,8 @@ z를 사용하여 정리하면 다음과 같이 나타낼 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cvec%7Bb%7D%3D-k%5Cvec%7Ba%7D) (k는 양의 정수)
 ```
-정리하면, 이변수 함수의 변화는 두 벡터의 내적으로 나타낼 수 있고 이 내적의 최솟값은 두 벡터가 반대 방향일 때다
-따라서 다음식의 관계가 성립해야 한다
+정리하면 이변수 함수의 변화는 두 벡터의 내적으로 나타낼 수 있고 이 내적의 최솟값은 두 벡터가 반대 방향일 때이다
+따라서 다음 관계가 성립해야 한다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29%3D-%5Ceta%20%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D)
 

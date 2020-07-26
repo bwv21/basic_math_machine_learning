@@ -40,7 +40,7 @@
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bpmatrix%7D%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%2C%26%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%20%5Cend%7Bpmatrix%7D%20%2C%20%28%5CDelta%7Bx%7D%2C%20%5CDelta%7By%7D%29)
 ```
-두 벡터의 내적은 다음과 깉고, 벡터의 크기를 고정했을 때 내적이 최솟값이 되려면 두 벡터의 방향이 반대여야 한다
+두 벡터의 내적은 다음과 같고, 벡터의 크기를 고정했을 때 내적이 최솟값이 되려면 두 벡터의 방향이 반대여야 한다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5Cvec%7Ba%7D%5Ccdot%5Cvec%7Bb%7D%3D%7C%5Cvec%7Ba%7D%7C%7C%5Cvec%7Bb%7D%7Ccos%5Ctheta)
 ```

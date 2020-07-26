@@ -31,9 +31,7 @@
 하지만 위의 식은 쉽게 풀리지 않기 때문에 방정식을 푸는 대신 점을 조금씩 움직여 함수의 최솟값을 찾아야 하는데 이것이 경사하강법이다
 ```
 ```
-어떻게 x와 y를 움직여야 가장 빠르게 경사면을 내려갈 수 있을까?
-```
-```
+어떻게 하면 경사면을 가장 빠르게 내려갈 수 있을지 찾기 위해 x와 y를 변화시키는 방법을 생각해본다
 함수 z = f(x, y)에서 x와 y를 각각 조금씩 변화시켰을 때의 함수는 다음과 같다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%5CDelta%7Bz%7D%5Capprox%20%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20x%7D%5CDelta%7Bx%7D&plus;%5Cfrac%7B%5Cpartial%20f%28x%2Cy%29%7D%7B%5Cpartial%20y%7D%5CDelta%7By%7D)

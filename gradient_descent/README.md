@@ -2,11 +2,12 @@
 
 ### 다변수 함수의 근사식
 ```
-일변수 함수 y = f(x) 에서 x 값을 변경할 때 함숫값 y는 얼마나 변할까에 대한 질문은 도함수의 정의에서 출발할 수 있다
+함수 y = f(x) 에서 x 값을 변경할 때 함숫값 y는 얼마나 변할까에 대한 질문은 도함수의 정의에서 출발할 수 있다
 ```
 >![equation](https://latex.codecogs.com/gif.latex?%7Bf%7D%27%28x%29%5Capprox%20%5Cfrac%7Bf%28x&plus;%5CDelta%7Bx%7D%29-f%28x%29%7D%7B%5CDelta%7Bx%7D%7D)
 ```
-이를 변형하면 다음과 같이 일변수 함수의 근사식(선형근사)을 얻을 수 있으며
+델타(Delta)x를 0에 근접해 있는 0과 거의 비슷한 값이라고 하면 극한의 개념을 없앤 위와 같은 근사식을 사용할 수 있다
+그리고 이를 변형하면 다음과 같이 일변수 함수의 근사식(선형근사)을 얻을 수 있으며
 ```
 >![equation](https://latex.codecogs.com/gif.latex?f%28x&plus;%5CDelta%7Bx%7D%29%5Capprox%20f%28x%29&plus;%7Bf%7D%27%28x%29%5CDelta%7Bx%7D)
 ```

@@ -1,5 +1,7 @@
 # 역전파법 Backpropagation
 
+![img](./img/00.png)
+l층의 가중치 w를 업데이트하기 위해 기울기를 구한다고 하자
 >![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20w_%7Bji%7D%5E%7B%28l%29%7D%7D%3D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20z_%7Bj%7D%5E%7B%28l%29%7D%7D%5Cfrac%7B%5Cpartial%20z_%7Bj%7D%5E%7B%28l%29%7D%7D%7B%5Cpartial%20w_%7Bji%7D%5E%7B%28l%29%7D%7D)
 
 우변의 두 번째 항은 다음과 같다

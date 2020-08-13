@@ -50,6 +50,6 @@ l층의 가중치 w를 업데이트하기 위해 기울기를 구한다고 하�
 
 >![equation](https://latex.codecogs.com/gif.latex?a_%7Bj%7D%5E%7BL%7D%3Dz_%7Bj%7D%5E%7BL%7D%3Dy_%7Bj%7D)
 
->![equation](https://latex.codecogs.com/gif.latex?%5Cdelta%20_%7Bj%7D%5E%7B%28l%29%7D%3D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20z_%7Bj%7D%5E%7B%28L%29%7D%7D%3Dy_%7Bj%7D-d_%7Bj%7D)
+>![equation](https://latex.codecogs.com/gif.latex?%5Cdelta%20_%7Bj%7D%5E%7B%28L%29%7D%3D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20z_%7Bj%7D%5E%7B%28L%29%7D%7D%3Dy_%7Bj%7D-d_%7Bj%7D)
 
 이진 분류, 다 클래스 분류의 경우에도 오차함수와 출력층의 활성화 함수는 다르지만 출력층 j의 델타L은 회귀와 동일하게 신경망의 출력과 목표 출력의 차가 된다
